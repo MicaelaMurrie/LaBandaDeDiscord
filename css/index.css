@@ -1,16 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* *{clear
     box-sizing: border-box;
 } */
-.contenedor-caja{
-    width: 200px;
-    height: 200px;
+.cuerpo {
+background-color: rgb(17, 4, 55);
+}
+
+.titulo {
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(53, 194, 255);
+    text-align: center;
+}
+
+.contenedor-loader{
+    margin: 6rem auto;
+    width: 10rem;
+    height: 10rem;
     display: flex;
     align-items: center;
     justify-content:  center;
     border-radius: 50%;
-    border: 30px solid rgba(14, 14, 15, 0.131);
+    border: 30px solid rgb(231, 201, 245);
+    
     position: relative;
+    
 }
 .loader{
     position: absolute;
@@ -18,11 +32,12 @@
     height: 100%;
     border-radius: inherit;
     background-color: transparent;
-    border-top: 30px solid rgb(89, 66, 159);
+    border-top: 30px solid transparent;
+    background: linear-gradient(rgb(21, 5, 68), rgb(17, 4, 55)) padding-box, linear-gradient( rgb(3, 137, 255),rgb(177, 104, 244), rgb(222, 129, 248) , rgb(237, 181, 251), rgb(253, 253, 253)) border-box;
     border-bottom: 30px solid transparent;
     border-right: 30px solid transparent;
     border-left: 30px solid transparent;
-    animation:loader 2s infinite linear;
+    animation:loader 1.7s infinite linear;
 }
 
 
