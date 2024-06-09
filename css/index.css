@@ -1,46 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-/* *{clear
-    box-sizing: border-box;
-} */
-.cuerpo {
-background-color: rgb(17, 4, 55);
+/* VARIABLES CSS */
+:root{
+    --color-titulos:rgb(53, 194, 255);
+    --color-textos:#FFF;
+    --color-links:rgb(222, 129, 248);
 }
 
-.titulo {
+/* RESETEO */
+*,
+::after,
+::before{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+    min-height: 100vh;
     font-family: "Ubuntu", sans-serif;
-    color: rgb(53, 194, 255);
+    background-color: rgb(17, 4, 55);
+}
+main{
+    min-height: inherit;
+    max-width: 95%;
+    margin: auto 0;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* COLORES DE TEXTOS O LINKS POR DEFECTO  */
+a{
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color-links);
+    transition: all .5s ease-in-out;
+}
+
+/*ESTILOS PARA CONTENEDORES FLEX POR DEFECTO */
+.contenedores-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* COLORES DE TEXTOS POR DEFECTO */
+.contenedor-principal__descripcion{
+    color: var(--color-textos);
+}
+
+/*********************************************CABECERA***************************************************/
+.contenedor-cabecera{
+    padding: 1em;
+    .contenedor-nav{
+        .contenedor-nav__lista-menu{
+            flex-wrap: wrap;
+            gap:2em;
+        }
+    }
+}
+
+/******************************CONTENIDO PRINCIPAL****************************/
+.contenedor-principal__titulo,
+.contenedor-pie__titulo{
+    color: var(--color-titulos);
     text-align: center;
 }
 
+.contenedor-principal{
+    .contenedor-principal__descripcion{
+        letter-spacing: 2px;
+        line-height: 2em;
+        text-align: center;
+    }
+}
+
+/***************************************PIE DE PÁGINA****************************************************/
+.contenedor-pie{
+   .contenedor-pie__titulo{
+      --color-titulo:#b168f4;
+   }
+}
+
+/*********************CARGANDO...*********************************/
 .contenedor-loader{
-    margin: 6rem auto;
-    width: 10rem;
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    justify-content:  center;
-    border-radius: 50%;
-    border: 30px solid rgb(231, 201, 245);
-    
-    position: relative;
-    
-}
-.loader{
     position: absolute;
-    width:100%;
-    height: 100%;
-    border-radius: inherit;
-    background-color: transparent;
-    border-top: 30px solid transparent;
-    background: linear-gradient(rgb(21, 5, 68), rgb(17, 4, 55)) padding-box, linear-gradient( rgb(3, 137, 255),rgb(177, 104, 244), rgb(222, 129, 248) , rgb(237, 181, 251), rgb(253, 253, 253)) border-box;
-    border-bottom: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-left: 30px solid transparent;
-    animation:loader 1.7s infinite linear;
+    inset: 0;
+    z-index: -1;
+    .loader{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background: linear-gradient(rgb(21, 5, 68), rgb(17, 4, 55)) padding-box, linear-gradient( rgb(3, 137, 255),rgb(177, 104, 244), rgb(222, 129, 248) , rgb(237, 181, 251), rgb(253, 253, 253)) border-box;
+        border: 30px solid transparent;
+        animation:loader 1.7s infinite linear;
+    }
 }
 
-
+/***************************ANIMACIONES*************************************/
 @keyframes loader {
     from{
         transform: rotate(0);
@@ -50,6 +114,12 @@ background-color: rgb(17, 4, 55);
     }
 }
 
+/* PSEUDO-CLASE HOVER SOLO PARA TAMAÑO ESCRITORIO */
+@media(hover:hover){
+    a:hover{
+        --color-links:#dddd55;
+    }
+}
 
 
 
