@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* VARIABLES CSS */
+:root {
+    --color-titulos: rgb(53, 194, 255);
+    --color-textos: #FFF;
+    --color-links: rgb(222, 129, 248);
+}
+
+/* RESETEO */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgb(17, 4, 55);
+}
+
+section {
+    display: flex;
+    margin: 3rem 4rem;
+}
+
+.mica {
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 20rem;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0px 0px 25px 1px #f2b8ffe2;
+    background: linear-gradient(rgb(3, 137, 255), rgb(177, 104, 244), rgb(222, 129, 248), rgb(237, 181, 251), rgb(253, 253, 253)) border-box;
+}
+
+.text {
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-titulos);
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--color-links);
+}
+
+p {
+    color: var(--color-textos);
+}
+
+@media (max-width: 800px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    section.mica {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 90%;
+        align-self: center;
+    }
+}
