@@ -19,13 +19,14 @@ body {
     background-color: rgb(17, 4, 55);
 }
 
-section {
+.profile__name {
     display: flex;
     margin: 3rem 4rem;
 }
 
-.mica {
-    flex-direction: row-reverse;
+.profile__name--mica img {
+    /* flex-direction: row-reverse; */
+    order: 1;
 }
 
 img {
@@ -55,19 +56,17 @@ p {
 }
 
 @media (max-width: 800px) {
-    section {
-        display: flex;
+    .profile__name {
         flex-direction: column;
         margin: 1rem;
-    }
-
-    section.mica {
-        display: flex;
-        flex-direction: column;
     }
 
     img {
         width: 90%;
         align-self: center;
+    }
+
+    .profile__name--mica img {
+        order: 0;
     }
 }
